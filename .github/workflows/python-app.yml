@@ -37,3 +37,15 @@ jobs:
     - name: Test with unittest
       run: |
         python -m unittest test_*.py 
+    - name: Run coverage report
+      run: |
+        python -m coverage html test_*py
+        
+    - name: Upload coverage artifact
+      uses: actions/upload-artifact@v3
+      with:
+         name: coverage-rep
+         path: htmlcov/
+         
+
+        
