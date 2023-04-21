@@ -39,7 +39,7 @@ jobs:
         python -m unittest test_*.py 
     - name: Run coverage report
       run: |
-        python -m coverage html test_*py
+        python -m coverage html test_*.py
         
     - name: Upload coverage artifact
       uses: actions/upload-artifact@v3
